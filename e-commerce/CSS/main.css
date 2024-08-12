@@ -360,6 +360,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
 }   
 .carrito-vacio{
     color: var(--clr-main);
@@ -488,30 +489,37 @@ main {
     transform: scale(1.07);
     cursor: pointer;
 }
+.carrito-comprado-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 .carrito-comprado{
-    color: var(--clr-main);
-    font-size: 4rem;
+    color: var(--clr-white);
+    font-size: 3rem;
     text-align: center;
-    opacity: 0;
-    transform: scale(0.5);
-    animation: gracias 1.6s ease-in both;
+    animation: gracias 1s ease-in-out both;
+    border: 3px solid var(--clr-main);
+    border-radius: 1rem;
+    background-color: var(--clr-main);
+    padding-bottom: .7rem;
+    padding: .6rem;
+    padding-bottom: 1.2rem;
 }
 
 
 @keyframes gracias {
     0% {
+        translate: 0 400px;
         opacity: 0;
-        transform: scale(0.5);
+
     }
-    10% {
-        opacity: 1;
-    }
-    60% {
-        transform: scale(1.1);
-    }
+
     100% {
-        transform: scale(1);
-        opacity: 1;
+        translate: 0 129px;
+        
+        opacity: 100%;
     }
 }
 
